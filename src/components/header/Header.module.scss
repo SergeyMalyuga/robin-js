@@ -1,0 +1,25 @@
+@use '../../styles/variables' as variables;
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 88px;
+}
+
+.link {
+  &Logo {
+    display: block;
+
+    img {
+      display: block;
+    }
+  }
+}
+
+.nav {
+  &Links {
+    display: flex;
+    gap: 48px;
+  }
+}
