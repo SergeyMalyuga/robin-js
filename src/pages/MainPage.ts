@@ -1,6 +1,6 @@
-import type {DataHook} from '../types/DataHook.type.ts';
-import type {MainProps} from '../models/MainProps.ts';
-import type {Header} from '../components/header/Header.ts';
+import type { DataHook } from '../types/DataHook.type.ts';
+import type { MainProps } from '../models/MainProps.ts';
+import type { Header } from '../components/header/Header.ts';
 
 export class MainPage {
   private container!: HTMLElement;
