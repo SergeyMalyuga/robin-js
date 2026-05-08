@@ -1,5 +1,12 @@
 @use '../../styles/variables' as variables;
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 .content {
   display: flex;
   justify-content: space-between;
@@ -15,11 +22,116 @@
       display: block;
     }
   }
+
+  &Nav {
+    text-decoration: none;
+    color: variables.$text-main;
+    font-size: 16px;
+    transition: text-decoration 0.3s ease;
+    text-decoration-color: transparent;
+
+    &:hover {
+      text-decoration: underline solid variables.$white 1px;
+      text-underline-offset: 2px;
+      text-underline-position: under;
+    }
+
+    @media (width <= 767px) {
+      font-size: 24px;
+    }
+  }
 }
 
 .nav {
+  transition: transform 0.5s ease;
+
   &Links {
     display: flex;
     gap: 48px;
+    height: 100%;
+    align-items: center;
+
+    @media (width <= 767px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @media (width <= 767px) {
+    background-color: variables.$bg-main;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 125px;
+    right: 0;
+    transform: translateX(100%);
+    z-index: 4;
+  }
+
+  &Open {
+    transform: translateX(0);
+  }
+}
+
+.active {
+  &Link {
+    display: flex;
+    align-items: center;
+    background-color: variables.$link-bg-active;
+    min-height: 88px;
+    padding: 0 25px;
+    transition: all 0.5s ease;
+  }
+}
+
+.burger {
+  display: none;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  padding: 0 3px;
+
+  &::before, span {
+    height: 2px;
+    background-color: variables.$burger-line;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 18px;
+    transition: transform 0.5s ease;
+  }
+
+  span {
+    width: 13px;
+    align-self: flex-end;
+    transition: transform 0.5s ease, width 0.5s ease;
+  }
+
+  &Open {
+    &::before, span {
+      position: absolute;
+      top: 50%;
+      left: 0;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    span {
+      width: 18px;
+      transform: rotate(-45deg);
+    }
+  }
+
+  @media (width <= 767px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
 }
