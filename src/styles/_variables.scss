@@ -5,7 +5,8 @@
 $black: rgb(0 0 0);
 $white: rgb(255 255 255);
 $midnight-blue: rgb(24 24 35);
-$gray-light: rgb(132 145 160);
+$gray-light: rgb(196 196 196);
+$gray-medium: rgb(132 145 160);
 $gray-dark: rgb(91 104 118);
 $purple: rgb(82 33 230);
 $green: rgb(60 199 78);
@@ -22,6 +23,12 @@ $text-main: $white;
 $text-accent-purple: $purple;
 $text-accent-green: $green;
 $text-accent-pink: $pink;
+
+/* link */
+$link-bg-active: $purple;
+
+/* burger */
+$burger-line: $gray-light;
 
 // ==== TYPOGRAPHY ==== //
 $font-family-primary: 'Sen', sans-serif;
