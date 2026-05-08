@@ -1,6 +1,6 @@
-import type { DataHook } from '../types/DataHook.type.ts';
-import type { MainProps } from '../models/MainProps.ts';
-import type { Header } from '../components/header/Header.ts';
+import type {DataHook} from '../types/DataHook.type.ts';
+import type {MainProps} from '../models/MainProps.ts';
+import type {Header} from '../components/header/Header.ts';
 
 export class MainPage {
   private container!: HTMLElement;
@@ -16,10 +16,15 @@ export class MainPage {
 ${this.header.render()}
     <main></main>
     `;
+    this.header.init();
   }
 
   public mount(element: HTMLElement, data: DataHook): void {
     const container = this.container.querySelector(data) as HTMLElement;
     container?.appendChild(element);
+  }
+
+  public destroy(): void {
+    this.header.destroy();
   }
 }
