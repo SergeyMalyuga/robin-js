@@ -15,7 +15,7 @@ export class Hero {
 <p >I’m probably the most passionate designer you will ever get to work with. If you have a great project that needs some amazing skills, I’m your guy.</p>
 </div>
 </div>
-</section
+</section>
   `
   }
 }

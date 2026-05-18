@@ -1,5 +1,5 @@
 export const Hooks = {
-  HEADER: '[data-hook="header"]',
+  EXPERIENCE: '[data-hook="experience"]',
   HERO: '[data-hook="hero"]',
   POPULAR: '[data-hook="popular"]',
   OFFERS: '[data-hook="offers"]',
