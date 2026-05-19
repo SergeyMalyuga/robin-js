@@ -55,6 +55,18 @@ body {
   }
 }
 
+.section {
+  padding: 120px 0;
+
+  @media (width <= 767px) {
+    padding: 80px 0;
+  }
+
+  @media (width <= 480px) {
+    padding: 48px 0;
+  }
+}
+
 .section-title {
   font-weight: 700;
 
@@ -64,6 +76,17 @@ body {
     line-height: 150%;
     text-transform: uppercase;
   }
+
+  &--big {
+    font-size: 55px;
+    line-height: 66px;
+    margin-bottom: 24px;
+
+    @media (width <= 767px) {
+      font-size: 32px;
+      line-height: 39px;
+    }
+  }
 }
 
 .section-subtitle {
@@ -71,6 +94,11 @@ body {
   font-size: 55px;
   font-weight: 700;
   line-height: 66px;
+
+  @media (width <= 767px) {
+    font-size: 32px;
+    line-height: 39px;
+  }
 }
 
 .visually-hidden {
