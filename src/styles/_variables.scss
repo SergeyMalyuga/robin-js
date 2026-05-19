@@ -18,10 +18,12 @@ $blue: rgb(96 155 255);
 /* background */
 $bg-main: $black;
 $bg-accent: $midnight-blue;
+$bg-accent-light: $peach;
 
 /* text */
 $text-main: $white;
 $text-accent-grey: $gray-medium;
+$text-accent-grey-dark: $gray-dark;
 $text-accent-purple: $purple;
 $text-accent-blue: $blue;
 $text-accent-green: $green;
@@ -37,6 +39,8 @@ $subtitle-main: $white;
 
 /* link */
 $link-bg-active: $purple;
+$link-accent: $midnight-blue;
+$link-border-bg: $gray-medium;
 
 /* burger */
 $burger-line: $gray-light;
