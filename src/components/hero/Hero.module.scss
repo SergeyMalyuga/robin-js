@@ -15,11 +15,15 @@
   }
 
   @media (width <= 767px) {
-    padding: 72px 0 48px;
+    padding: 88px 0 80px;
 
     &::before {
       background-color: transparent;
     }
+  }
+
+  @media (width <= 480px) {
+    padding: 72px 0 48px;
   }
 }
 
