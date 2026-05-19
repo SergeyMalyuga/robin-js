@@ -1,10 +1,84 @@
 @use '../../styles/variables' as variables;
 
 .experience {
-padding: 120px 0 144px;
+  padding: 120px 0 144px;
+
+  &List {
+    counter-reset: myCounter 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+
+    @media (width <= 767px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @media (width <= 767px) {
+    padding: 80px 0 104px;
+  }
+
+  @media (width <= 480px) {
+    padding: 48px 0;
+  }
+}
+
+.item {
+  counter-increment: myCounter 1;
+
+  &::before {
+    content: "0" counter(myCounter);
+    color: variables.$counter-color;
+    font-size: 117px;
+    line-height: 141px;
+  }
 }
 
 .subtitle {
   max-width: 690px;
   width: 100%;
+}
+
+.title {
+  &Main {
+    margin-bottom: 8px;
+  }
+
+  &Item {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 150%;
+    margin-bottom: 22px;
+
+    @media (width <= 480px) {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.text {
+  color: variables.$text-accent-grey;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.accent {
+  &Green {
+    color: variables.$text-accent-green;
+  }
+
+  &Blue {
+    color: variables.$text-accent-blue;
+  }
+
+  &Pink {
+    color: variables.$text-accent-pink;
+  }
 }
