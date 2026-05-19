@@ -13,6 +13,7 @@ $green: rgb(60 199 78);
 $pink: rgb(233 93 144);
 $peach: rgb(255 243 228);
 $violet: rgb(251 228 255);
+$blue: rgb(96 155 255);
 
 /* background */
 $bg-main: $black;
@@ -20,7 +21,9 @@ $bg-accent: $midnight-blue;
 
 /* text */
 $text-main: $white;
+$text-accent-grey: $gray-medium;
 $text-accent-purple: $purple;
+$text-accent-blue: $blue;
 $text-accent-green: $green;
 $text-accent-pink: $pink;
 
@@ -37,6 +40,9 @@ $link-bg-active: $purple;
 
 /* burger */
 $burger-line: $gray-light;
+
+/* counter */
+$counter-color: $gray-medium;
 
 // ==== TYPOGRAPHY ==== //
 $font-family-primary: 'Sen', sans-serif;
