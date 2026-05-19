@@ -6,6 +6,7 @@
   left: 0;
   width: 100%;
   z-index: 100;
+  background-color: variables.$bg-main;
 }
 
 .content {
@@ -14,7 +15,7 @@
   align-items: center;
   min-height: 88px;
 
-  @media (width <= 767px) {
+  @media (width <= 480px) {
     min-height: 72px;
   }
 }
@@ -67,10 +68,14 @@
     position: fixed;
     height: 100vh;
     width: 100%;
-    top: 125px;
+    top: 88px;
     right: 0;
     transform: translateX(100%);
     z-index: 4;
+  }
+
+  @media (width <= 480px) {
+    top: 72px;
   }
 
   &Open {
