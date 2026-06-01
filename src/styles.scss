@@ -109,6 +109,34 @@ body {
   margin-bottom: 12px;
 }
 
+.link {
+  position: relative;
+  text-decoration: none;
+  color: variables.$link-accent;
+  display: block;
+  margin-top: auto;
+  width: max-content;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: variables.$link-border-bg;
+    transition: transform 0.3s ease, height 0.3s ease;
+  }
+
+  &:hover {
+    &::before {
+      transform: scale(0.85);
+      height: 2px;
+    }
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
