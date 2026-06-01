@@ -1,0 +1,77 @@
+@use '../../styles/variables' as variables;
+
+.projects {
+  padding-bottom: 120px;
+
+  @media (width <= 768px) {
+    padding-bottom: 80px;
+  }
+
+  &Header {
+    margin-bottom: 80px;
+  }
+}
+
+.content {
+  width: 100%;
+  column-count: 2;
+  column-gap: 24px;
+
+  @media (width <= 1024px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
+
+.card {
+  max-width: 636px;
+  width: 100%;
+  margin-bottom: 24px;
+  break-inside: avoid;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+  }
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(0.9);
+  }
+}
+
+.text {
+  color: variables.$text-accent-grey;
+}
+
+.button {
+  display: block;
+  width: 247px;
+  height: 75px;
+  margin: 80px auto 0;
+  background-color: transparent;
+  border: 1px solid gray;
+  cursor: pointer;
+  color: variables.$text-main;
+  text-transform: uppercase;
+  transition: background 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background-color: variables.$button-bg-hover;
+    transform: scale(0.98);
+  }
+
+  @media (width <= 768px) {
+    margin-top: 40px;
+  }
+}
