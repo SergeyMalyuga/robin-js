@@ -1,0 +1,50 @@
+@use '../../styles/variables' as variables;
+
+.content {
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media (width <= 768px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.info {
+  max-width: 576px;
+  padding: 120px 72px;
+
+  @media (width <= 768px) {
+    padding: 80px 40px;
+  }
+
+  @media (width <= 480px) {
+    padding: 48px 20px;
+  }
+}
+
+.instagram {
+  background-color: variables.$bg-accent-violet;
+}
+
+.title {
+  color: variables.$title-accent-dark;
+  margin-bottom: 24px;
+}
+
+.text {
+  color: variables.$text-accent-grey-dark;
+  margin-bottom: 124px;
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
