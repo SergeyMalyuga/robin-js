@@ -4,6 +4,7 @@ import type {Experience} from '../components/experience/Experience.ts';
 import type {Values} from '../components/values/Values.ts';
 import type {SkillSet} from '../components/skillset/SkillSet.ts';
 import type {Projects} from '../components/projects/Projects.ts';
+import type {Instagram} from '../components/instagram/Instagram.ts';
 
 export interface MainProps {
   header: Header;
@@ -12,4 +13,5 @@ export interface MainProps {
   values: Values;
   skillSet: SkillSet;
   projects: Projects;
+  instagram: Instagram;
 }
