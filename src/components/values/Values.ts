@@ -10,7 +10,7 @@ export class Values {
 <p class="${styles.text}">I think everyone wants the same thing - relationship with humanity,
 peace with the metaphysical, and experience with the universe.
 I try to grasp these things with my values: authenticity, creativity, & hospitality.</p>
-<a class="${styles.link}" href="#">More about me</a>
+<a class="link" href="#">More about me</a>
 </div>
 <picture class="${styles.imageWrapper}">
 <source srcset="/images/raster/values-bg-mobile.jpg" media="(max-width: 480px)"/>
