@@ -5,6 +5,7 @@ import {Hero} from './components/hero/Hero.ts';
 import {Experience} from './components/experience/Experience.ts';
 import {Values} from './components/values/Values.ts';
 import {SkillSet} from './components/skillset/SkillSet.ts';
+import {Projects} from './components/projects/Projects.ts';
 
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.getElementById('app') as HTMLElement;
@@ -13,8 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const experience = new Experience();
   const values = new Values();
   const skillSet = new SkillSet();
+  const projects = new Projects();
 
-  const mainPage = new MainPage(container, {header, hero, experience, values, skillSet});
+  const mainPage = new MainPage(container, {header, hero, experience, values, skillSet, projects});
   mainPage.render();
 
   window.addEventListener('beforeunload', () => {
