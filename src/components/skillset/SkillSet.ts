@@ -3,6 +3,7 @@ import styles from './SkillSet.module.scss'
 export class SkillSet {
   public render() {
     return `
+<section>
     <div class="${styles.content} container">
     <div class="${styles.wrapperContent}">
         <div>
@@ -15,27 +16,27 @@ export class SkillSet {
     <ul class="${styles.listSkills}">
 <li>
 <img class="${styles.image}" src="/images/vector/product-icon.svg" width="32" height="32" loading="lazy" alt=""/>
-<h3 class="${styles.title}">Product Design</h3>
-<p>Working at Facebook has taught me a lot about how to understand users,
+<h3 class="card-title">Product Design</h3>
+<p class="${styles.text}">Working at Facebook has taught me a lot about how to understand users,
 solve problems and build great products.</p>
 </li>
 <li>
 <img class="${styles.image}" src="/images/vector/design-icon.svg" width="32" height="32" loading="lazy" alt=""/>
-<h3 class="${styles.title}">Visual Design</h3>
-<p>My experience at dribble has helped me learn to develop the eye for design.
+<h3 class="card-title">Visual Design</h3>
+<p class="${styles.text}">My experience at dribble has helped me learn to develop the eye for design.
 Colors, typography, layout and the whole package.</p>
 </li>
 <li>
 <img class="${styles.image}" src="/images/vector/motion-icon.svg" width="32" height="32" loading="lazy" alt=""/>
-<h3 class="${styles.title}">Motion Design</h3>
-<p>I started my design journey with motion design in my college days.
+<h3 class="card-title">Motion Design</h3>
+<p class="${styles.text}">I started my design journey with motion design in my college days.
 Motion is something that really fascinates me because of the flexibility
 of story telling.</p>
 </li>
 <li>
 <img class="${styles.image}" src="/images/vector/photography-icon.svg" width="32" height="32" loading="lazy" alt=""/>
-<h3 class="${styles.title}">Photography</h3>
-<p>Clicking pictures really brings out the creative in me.
+<h3 class=card-title>Photography</h3>
+<p class="${styles.text}">Clicking pictures really brings out the creative in me.
 Photography really makes you look and perceive things in a different way.</p>
 </li>
 </ul>
@@ -48,6 +49,8 @@ Photography really makes you look and perceive things in a different way.</p>
 <li><img src="/images/vector/skill-icon-5.svg" width="154" height="25"/></li>
 <li><img src="/images/vector/skill-icon-6.svg" width="42" height="21"/></li>
 </ul>
-</div>`
+</div>
+</section>
+`
   }
 }
