@@ -6,6 +6,7 @@ import type {Experience} from '../components/experience/Experience.ts';
 import type {Values} from '../components/values/Values.ts';
 import type {SkillSet} from '../components/skillset/SkillSet.ts';
 import type {Projects} from '../components/projects/Projects.ts';
+import type {Instagram} from '../components/instagram/Instagram.ts';
 
 export class MainPage {
   private container: HTMLElement;
@@ -15,6 +16,7 @@ export class MainPage {
   private values: Values;
   private skillSet: SkillSet;
   private projects: Projects;
+  private instagram: Instagram;
 
   public constructor(container: HTMLElement, props: MainProps) {
     this.container = container;
@@ -24,6 +26,7 @@ export class MainPage {
     this.values = props.values;
     this.skillSet = props.skillSet;
     this.projects = props.projects;
+    this.instagram = props.instagram;
   }
 
   public render(): void {
@@ -35,6 +38,7 @@ export class MainPage {
       ${this.values.render()}
       ${this.skillSet.render()}
       ${this.projects.render()}
+      ${this.instagram.render()}
     </main>
   `;
     this.header.init();
