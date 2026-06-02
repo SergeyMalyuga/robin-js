@@ -1,0 +1,33 @@
+@use '../../styles/variables' as variables;
+
+.content {
+  padding: 0 182px;
+
+  @media (width <= 1024px) {
+    padding: 0 40px;
+  }
+
+  @media (width <= 480px) {
+    padding: 0 20px;
+  }
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.text {
+  color: variables.$text-accent-grey;
+  margin-bottom: 40px;
+}
+
+.link {
+  color: variables.$text-main;
+  margin-bottom: 120px;
+
+  @media (width <= 768px) {
+    margin-bottom: 65px;
+  }
+}
