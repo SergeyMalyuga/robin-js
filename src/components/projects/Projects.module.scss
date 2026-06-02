@@ -38,6 +38,10 @@
     height: auto;
     margin-bottom: 40px;
   }
+
+  @media (width <= 768px) {
+    max-width: 688px;
+  }
 }
 
 .link {
