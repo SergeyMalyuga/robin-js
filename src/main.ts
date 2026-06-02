@@ -8,6 +8,7 @@ import {SkillSet} from './components/skillset/SkillSet.ts';
 import {Projects} from './components/projects/Projects.ts';
 import {Instagram} from './components/instagram/Instagram.ts';
 import {Dribbble} from './components/dribbble/Dribbble.ts';
+import {Response} from './components/response/Response.ts';
 
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.getElementById('app') as HTMLElement;
@@ -19,9 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const projects = new Projects();
   const instagram = new Instagram();
   const dribbble = new Dribbble();
+  const response = new Response();
 
   const mainPage = new MainPage(container, {header, hero, experience,
-    values, skillSet, projects, instagram, dribbble});
+    values, skillSet, projects, instagram, dribbble, response});
   mainPage.render();
 
   window.addEventListener('beforeunload', () => {
