@@ -1,0 +1,83 @@
+@use '../../styles/variables' as variables;
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+
+  @media (width <= 930px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.text {
+  color: variables.$text-accent-grey;
+  margin-bottom: 40px;
+}
+
+.link {
+  color: variables.$text-main;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.quote {
+  margin: 0;
+  color: white;
+  padding: 64px;
+  border: 1px solid variables.$quote-border-color;
+  border-top: none;
+
+  p {
+    quotes: "“" "”";
+    margin-bottom: 64px;
+
+
+    &::before {
+      content: open-quote;
+      font-size: 2rem;
+      vertical-align: -0.3em;
+    }
+
+    &::after {
+      content: close-quote;
+      font-size: 2rem;
+      vertical-align: -0.3em;
+    }
+  }
+
+  @media (width <= 1380px) {
+  padding: 32px;
+  }
+}
+
+.footer {
+  span {
+    display: block;
+  }
+
+  cite {
+    font-style: normal;
+    font-weight: bold;
+  }
+
+  span, cite {
+    color: variables.$text-accent-grey;
+  }
+}
+
+.list {
+  li:not(:last-child) {
+    margin-bottom: 120px;
+
+    @media (width <= 1380px) {
+      margin-bottom: 64px;
+    }
+  }
+}
+
