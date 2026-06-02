@@ -7,6 +7,7 @@ import type {Values} from '../components/values/Values.ts';
 import type {SkillSet} from '../components/skillset/SkillSet.ts';
 import type {Projects} from '../components/projects/Projects.ts';
 import type {Instagram} from '../components/instagram/Instagram.ts';
+import type {Dribbble} from '../components/dribbble/Dribbble.ts';
 
 export class MainPage {
   private container: HTMLElement;
@@ -17,6 +18,7 @@ export class MainPage {
   private skillSet: SkillSet;
   private projects: Projects;
   private instagram: Instagram;
+  private dribbble: Dribbble;
 
   public constructor(container: HTMLElement, props: MainProps) {
     this.container = container;
@@ -27,6 +29,7 @@ export class MainPage {
     this.skillSet = props.skillSet;
     this.projects = props.projects;
     this.instagram = props.instagram;
+    this.dribbble = props.dribbble;
   }
 
   public render(): void {
@@ -39,6 +42,7 @@ export class MainPage {
       ${this.skillSet.render()}
       ${this.projects.render()}
       ${this.instagram.render()}
+      ${this.dribbble.render()}
     </main>
   `;
     this.header.init();
