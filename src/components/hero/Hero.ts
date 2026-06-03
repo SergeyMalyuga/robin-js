@@ -4,7 +4,7 @@ export class Hero {
 
   public render() {
     return `
-  <section class="${styles.hero}">
+  <section id="main" class="${styles.hero}">
   <div class="${styles.content}">
   <picture class="${styles.wrapperImage}">
   <source srcset="/images/raster/hero-robin-mobile.jpg" media="(max-width: 360px)">
