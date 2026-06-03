@@ -11,6 +11,7 @@ import type {Dribbble} from '../components/dribbble/Dribbble.ts';
 import type {Response} from '../components/response/Response.ts';
 import type {Gallery} from '../components/gallery/Gallery.ts';
 import {Hooks} from '../constants/consts.ts';
+import type {Contact} from '../components/contact/Contact.ts';
 
 export class MainPage {
   private container: HTMLElement;
@@ -24,6 +25,7 @@ export class MainPage {
   private dribbble: Dribbble;
   private response: Response;
   private gallery: Gallery;
+  private contact: Contact;
 
   public constructor(container: HTMLElement, props: MainProps) {
     this.container = container;
@@ -37,6 +39,7 @@ export class MainPage {
     this.dribbble = props.dribbble;
     this.response = props.response;
     this.gallery = props.gallery;
+    this.contact = props.contact;
   }
 
   public render(): void {
@@ -52,11 +55,14 @@ export class MainPage {
       ${this.dribbble.render()}
       ${this.response.render()}
       <div data-hook="gallery"></div>
+      <div data-hook="contact"></div>
     </main>
   `;
-    this.mount(this.gallery.render(), Hooks.GALLERY)
+    this.mount(this.gallery.render(), Hooks.GALLERY);
+    this.mount(this.contact.render(), Hooks.CONTACT);
     this.header.init();
-    this.gallery.init()
+    this.gallery.init();
+    this.contact.init();
   }
 
   public mount(element: HTMLElement, data: DataHook): void {
@@ -67,5 +73,6 @@ export class MainPage {
   public destroy(): void {
     this.header.destroy();
     this.gallery.destroy();
+    this.contact.destroy();
   }
 }
