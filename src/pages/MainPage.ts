@@ -12,6 +12,7 @@ import type {Response} from '../components/response/Response.ts';
 import type {Gallery} from '../components/gallery/Gallery.ts';
 import {Hooks} from '../constants/consts.ts';
 import type {Contact} from '../components/contact/Contact.ts';
+import type {Footer} from '../components/footer/Footer.ts';
 
 export class MainPage {
   private container: HTMLElement;
@@ -26,6 +27,7 @@ export class MainPage {
   private response: Response;
   private gallery: Gallery;
   private contact: Contact;
+  private footer: Footer;
 
   public constructor(container: HTMLElement, props: MainProps) {
     this.container = container;
@@ -40,6 +42,7 @@ export class MainPage {
     this.response = props.response;
     this.gallery = props.gallery;
     this.contact = props.contact;
+    this.footer = props.footer;
   }
 
   public render(): void {
@@ -57,6 +60,7 @@ export class MainPage {
       <div data-hook="gallery"></div>
       <div data-hook="contact"></div>
     </main>
+    ${this.footer.render()}
   `;
     this.mount(this.gallery.render(), Hooks.GALLERY);
     this.mount(this.contact.render(), Hooks.CONTACT);
