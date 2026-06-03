@@ -11,6 +11,7 @@ import {Dribbble} from './components/dribbble/Dribbble.ts';
 import {Response} from './components/response/Response.ts';
 import {Gallery} from './components/gallery/Gallery.ts';
 import {Contact} from './components/contact/Contact.ts';
+import {Footer} from './components/footer/Footer.ts';
 
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.getElementById('app') as HTMLElement;
@@ -25,9 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const response = new Response();
   const gallery = new Gallery();
   const contact = new Contact();
+  const footer = new Footer();
 
   const mainPage = new MainPage(container, {header, hero, experience,
-    values, skillSet, projects, instagram, dribbble, response, gallery, contact});
+    values, skillSet, projects, instagram, dribbble, response, gallery, contact, footer});
   mainPage.render();
 
   window.addEventListener('beforeunload', () => {
