@@ -9,6 +9,7 @@ import {Projects} from './components/projects/Projects.ts';
 import {Instagram} from './components/instagram/Instagram.ts';
 import {Dribbble} from './components/dribbble/Dribbble.ts';
 import {Response} from './components/response/Response.ts';
+import {Gallery} from './components/gallery/Gallery.ts';
 
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.getElementById('app') as HTMLElement;
@@ -21,9 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const instagram = new Instagram();
   const dribbble = new Dribbble();
   const response = new Response();
+  const gallery = new Gallery();
 
   const mainPage = new MainPage(container, {header, hero, experience,
-    values, skillSet, projects, instagram, dribbble, response});
+    values, skillSet, projects, instagram, dribbble, response, gallery});
   mainPage.render();
 
   window.addEventListener('beforeunload', () => {
