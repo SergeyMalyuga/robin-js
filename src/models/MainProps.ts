@@ -8,6 +8,7 @@ import type {Instagram} from '../components/instagram/Instagram.ts';
 import type {Dribbble} from '../components/dribbble/Dribbble.ts';
 import type {Response} from '../components/response/Response.ts';
 import type {Gallery} from '../components/gallery/Gallery.ts';
+import type {Contact} from '../components/contact/Contact.ts';
 
 export interface MainProps {
   header: Header;
@@ -20,4 +21,5 @@ export interface MainProps {
   dribbble: Dribbble;
   response: Response;
   gallery: Gallery;
+  contact: Contact;
 }
