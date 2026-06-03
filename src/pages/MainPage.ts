@@ -9,6 +9,8 @@ import type {Projects} from '../components/projects/Projects.ts';
 import type {Instagram} from '../components/instagram/Instagram.ts';
 import type {Dribbble} from '../components/dribbble/Dribbble.ts';
 import type {Response} from '../components/response/Response.ts';
+import type {Gallery} from '../components/gallery/Gallery.ts';
+import {Hooks} from '../constants/consts.ts';
 
 export class MainPage {
   private container: HTMLElement;
@@ -21,6 +23,7 @@ export class MainPage {
   private instagram: Instagram;
   private dribbble: Dribbble;
   private response: Response;
+  private gallery: Gallery;
 
   public constructor(container: HTMLElement, props: MainProps) {
     this.container = container;
@@ -33,6 +36,7 @@ export class MainPage {
     this.instagram = props.instagram;
     this.dribbble = props.dribbble;
     this.response = props.response;
+    this.gallery = props.gallery;
   }
 
   public render(): void {
@@ -47,9 +51,12 @@ export class MainPage {
       ${this.instagram.render()}
       ${this.dribbble.render()}
       ${this.response.render()}
+      <div data-hook="gallery"></div>
     </main>
   `;
+    this.mount(this.gallery.render(), Hooks.GALLERY)
     this.header.init();
+    this.gallery.init()
   }
 
   public mount(element: HTMLElement, data: DataHook): void {
@@ -59,5 +66,6 @@ export class MainPage {
 
   public destroy(): void {
     this.header.destroy();
+    this.gallery.destroy();
   }
 }
