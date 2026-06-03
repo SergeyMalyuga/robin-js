@@ -1,11 +1,8 @@
 import type {CityCard} from '../models/CityCard.ts';
 
 export const Hooks = {
-  EXPERIENCE: '[data-hook="experience"]',
+  CONTACT: '[data-hook="contact"]',
   GALLERY: '[data-hook="gallery"]',
-  POPULAR: '[data-hook="popular"]',
-  OFFERS: '[data-hook="offers"]',
-  NEWS: '[data-hook="news"]',
 } as const;
 
 export enum City {
